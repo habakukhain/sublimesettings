@@ -1,0 +1,109 @@
+<snippet>
+	<content><![CDATA[
+\documentclass[a4paper,12pt]{article}
+\usepackage[intlimits]{amsmath}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage{bibentry}
+\usepackage[ngerman]{babel}
+\addto\captionsngerman{
+  \renewcommand{\figurename}{Figure}
+}
+\addto\captionsngerman{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
+%\usepackage{cite}
+\usepackage{natbib}
+\setcitestyle{aysep={}}
+\usepackage[autostyle]{csquotes}
+\renewcommand{\bibsection}{\subsection*{References}}
+%\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage[ngerman]{babel}
+%\usepackage{chemfig}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage[version=3]{mhchem}
+\usepackage{nicefrac}
+\usepackage[justification=centering]{caption}
+\usepackage{floatrow}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{scrextend}
+\floatstyle{plaintop}
+\restylefloat{table}
+\usepackage{sectsty}
+\usepackage{lipsum}
+\usepackage{multirow}
+%Gegen Schusterjungen und Hurensöhne
+\usepackage{blindtext,etoolbox}
+\makeatletter
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+\let\squaren\square
+\let\square\@undefined
+\makeatother
+\usepackage{SIunits}
+\usepackage[lmargin=4cm, rmargin=4cm, tmargin=3cm, bmargin=4.5cm]{geometry}
+\usepackage{bpchem}
+%\graphicspath{Macintosh HD/Users/habakuk/Dropbox/JHP/Grundpraktikum/Teil1/Bilder}
+\renewcommand{\figurename}{Figure}
+\captionsetup[table]{name=Table}
+\let\oldsqrt\sqrt
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{%
+\setbox0=\hbox{\$#1\oldsqrt{#2\,}\$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\renewcommand*{\thefootnote}{[\arabic{footnote}]}
+\setlength\parindent{0pt}
+\usepackage{outlines}
+\usepackage[shortlabels]{enumitem}
+\setenumerate[1]{label=\Roman*.}
+\setenumerate[2]{label=\Alph*.}
+\setenumerate[3]{label=\arabic*.}
+\setenumerate[4]{label=\alph*.}
+\usepackage{chemgreek,textgreek,enumitem}
+\makeatletter
+% commands to format a counter value as Greek letter to be used like
+% \arabic or \roman:
+\newcommand*\alphgreek[1]{\expandafter\@alphgreek\csname c@#1\endcsname}
+\newcommand*\@alphgreek[1]{\csname chemgreek_int_to_greek:n\endcsname{#1}}
+\newcommand*\Alphgreek[1]{\expandafter\@Alphgreek\csname c@#1\endcsname}
+\newcommand*\@Alphgreek[1]{\csname chemgreek_int_to_Greek:n\endcsname{#1}}
+% register new counter formats to enumitem:
+\AddEnumerateCounter*{\alphgreek}{\@alphgreek}{\chemalpha}
+\AddEnumerateCounter*{\Alphgreek}{\@Alphgreek}{\chemAlpha}
+\makeatother
+\renewcommand\bibsection{\section{References}}
+
+\title{TITLE}
+\author{Habakuk Hain}
+\date{\today}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{A}
+\subsection{B} % (fold)
+
+
+\bibliographystyle{apalike}
+\bibliography{bibl.bib}{}
+\end{document}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>newtex</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

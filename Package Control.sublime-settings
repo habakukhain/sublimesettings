@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Advanced CSV",
+		"Anaconda",
+		"ayu",
+		"Djaneiro",
+		"GitGutter",
+		"Julia",
+		"LaTeX-cwl",
+		"LaTeXing",
+		"LaTeXTools",
+		"MarkdownEditing",
+		"Package Control",
+		"requirementstxt",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeREPL",
+		"Terminal",
+		"Terminus"
+	]
+}
