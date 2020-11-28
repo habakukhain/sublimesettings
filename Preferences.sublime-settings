@@ -1,0 +1,35 @@
+{
+	"added_words":
+	[
+		"ipsilateral",
+		"contralateral",
+		"endbulbs",
+		"postsynaptic",
+		"anteroventral"
+	],
+	"auto_complete": false,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": ".",
+			"selector": "source.python - string - comment - constant.numeric"
+		},
+		{
+			"characters": "\\",
+			"selector": "text.tex.latex"
+		}
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 10,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"sublimelinter": false,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"word_wrap": true
+}
